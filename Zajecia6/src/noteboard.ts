@@ -9,10 +9,10 @@ export class NoteBoard {
     storage: NoteStore;
 
     constructor() {
-        this.storage = new LocalStorageStore();
+        this.storage = new SessionStorageStore();
         this.addTitleInput();
         this.addContentInput();
-        this.addButton();
+        this.addButton();                        
         this.notesContainer = <HTMLDivElement>(document.createElement('div'));
         document.body.append(this.notesContainer);
     }
@@ -46,7 +46,7 @@ export class NoteBoard {
         addButton.textContent = "Add";
         addButton.addEventListener('click', () => {
             let title = (<HTMLInputElement>document.getElementById('title')).value;
-            let content = (<HTMLInputElement>document.getElementById('content')).value;
+            let content = (<HTMLInputElement>document.getElementById('content')).value;    
             this.storage.addNote(new Note(title, content));
             this.refreshList();
         });
@@ -59,7 +59,7 @@ export class NoteBoard {
         const notes = <Note[]>this.storage.getNotes();
         if (!notes)
             return;
-        notes.forEach((item) => {
+        notes.forEach( (item) => {
             const titleDiv = <HTMLDivElement>(document.createElement('div'));
             titleDiv.innerHTML = item.title;
             const contentDiv = <HTMLDivElement>(document.createElement('div'));
