@@ -1,16 +1,12 @@
 class Cell {
-    cellValue: number;
+    cellValue: string;
     htmlElement: HTMLElement;
     constructor(cell: HTMLElement) {
         this.htmlElement = cell;
+        this.cellValue = '';
     }
-
-    setCellValue(value: number) {
-        // TODO: napisz samemu metodę, która ustawia w
-        // tabeli kółko i krzyżyk. Możesz przyjąć, że kółko
-        // to wartość -1, krzyżyk to wartość 1, a 0 (zero)
-        // oznacza pole nieustawione.
-        this.cellValue = value
+    setCellValue(value: string) {
+        this.cellValue = value;
     }
 }
-export default Cell
+export default Cell;

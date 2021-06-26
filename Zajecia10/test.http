@@ -1,0 +1,68 @@
+###
+GET http://localhost:8080/hello
+//wyświetlenie hello
+###
+GET  http://localhost:8080/products
+//wyświetlenie talblicy produktów
+//product
+###
+
+POST http://localhost:8080/products HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Wanna",
+    "description": "Wanna z drabiną",
+    "price": 2525,
+    "category":"60c7b42c4449ad384c37a8be"
+}
+//dodanie do tablicy elementu
+###
+DELETE http://localhost:8080/products HTTP/1.1
+content-type: application/json
+
+{
+    "id": "60c7b43f4449ad384c37a8bf"
+}
+###
+PUT http://localhost:8080/products HTTP/1.1
+content-type: application/json
+
+{
+    "id": "60c7a25f6fd9cb1198f2a898",
+    "name": "Kamera 5",
+    "description": "Telewizor plazmowy",
+    "price": 15000
+}
+
+
+
+//funkcje dla category
+###
+GET  http://localhost:8080/categories  HTTP/1.1
+//wyświetlenie talblicy produktów
+//product
+###
+
+POST http://localhost:8080/categories  HTTP/1.1
+content-type: application/json
+
+{
+    "name": "RTV i AGD"
+}
+//dodanie do tablicy elementu
+###
+DELETE http://localhost:8080/localhost:8080/categories  HTTP/1.1
+content-type: application/json
+
+{
+    "id": "60c7b669440c1a09d454b3d9"
+}
+###
+PUT http://localhost:8080/categories/ 
+content-type: application/json
+
+{
+    "id": "60c7b669440c1a09d454b3d9",
+    "name": "Lodówki"
+}
