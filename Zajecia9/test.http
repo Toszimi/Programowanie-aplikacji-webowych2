@@ -1,10 +1,10 @@
 ###
 GET http://localhost:8080/hello
-//wyświetlenie hello
+
 ###
 GET  http://localhost:8080/products
-//wyświetlenie talblicy produktów
-//product
+
+
 ###
 
 POST http://localhost:8080/products HTTP/1.1
@@ -16,7 +16,7 @@ content-type: application/json
     "description": "Telewizor plazmowy",
     "price": 5000
 }
-//dodanie do tablicy elementu
+
 ###
 DELETE http://localhost:8080/products/1 HTTP/1.1
 ###
@@ -25,19 +25,18 @@ content-type: application/json
 
 {
     "id":"1",
-    "name":"Telewizor 2",
-    "description":"Telewizor plazmowy zmienony",
+    "name":"Telewizor 58",
+    "description":"Telewizor plazmowy zmieniony",
     "price":500
 }
 
 
 
 
-//funkcje dla category
+
 ###
 GET  http://localhost:8080/categories  HTTP/1.1
-//wyświetlenie talblicy produktów
-//product
+
 ###
 
 POST http://localhost:8080/categories 
@@ -49,7 +48,7 @@ content-type: application/json
     "quantity": 220
     
 }
-//dodanie do tablicy elementu
+
 ###
 DELETE http://localhost:8080/categories/2 
 ###

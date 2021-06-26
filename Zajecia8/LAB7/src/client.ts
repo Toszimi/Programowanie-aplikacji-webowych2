@@ -1,6 +1,6 @@
-let socket = new WebSocket("ws://localhost:8080");
+let socket = new WebSocket("ws://localhost:9090");
 socket.onopen = function (e) {
-    socket.send("Hello");
+    socket.send("To jest socket");
 };
 //
 socket.onmessage = function (event) {
